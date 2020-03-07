@@ -40,19 +40,23 @@ public class CaptchaGen {
 				for (int k = 0; k < 10; k++) {
 					for (int l = 0; l < 10; l++) {
 						for (int m = 0; m < 10; m++) {
-							//for (int n = 0; n < 10; n++) {
-								/*
-								String captchatext = String.valueOf(""+set1[i]+set2[j]+set3[k]+set4[l]+set5[m]);
-								String filename = String.valueOf(""+i+j+k+l+m);
-								//System.out.println(captchatext);
-								pool.submit(new CaptchaTask(captchatext, filename));
-								pool.submit(new CaptchaTask2(captchatext, filename));
-								*/
 							
+							//First run this code 1 and then the code 2
+							
+							
+							/* Code 1 to create JPG in cap1 and cap2 folder
+							String captchatext = String.valueOf(""+set1[i]+set2[j]+set3[k]+set4[l]+set5[m]);
+							String filename = String.valueOf(""+i+j+k+l+m);
+							//System.out.println(captchatext);
+							pool.submit(new CaptchaTask(captchatext, filename));
+							pool.submit(new CaptchaTask2(captchatext, filename));
+							*/
+							
+							//Code 2 to combine JPG in cap1 folder and cap2 folder in one GIF
 							String filename = String.valueOf(""+i+j+k+l+m);
 							pool.submit(new CombineJPG(filename));
 							
-							//}
+							
 						}
 					}
 				}
